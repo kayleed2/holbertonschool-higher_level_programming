@@ -11,4 +11,4 @@ def fizzbuzz():
             else:
                 print(i, end=" ")
         elif i == 100:
-            print("Buzz")
+            print("Buzz", end="")
