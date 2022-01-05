@@ -2,5 +2,7 @@
 
 a = 1
 b = 2
-import add_0
-print("{} + {} = {}".format(a, b, add_0.add(a, b)))
+from add_0 import add
+print("{} + {} = {}".format(a, b, add(a, b)))
+if __name__ == "__main__":
+    import sys
