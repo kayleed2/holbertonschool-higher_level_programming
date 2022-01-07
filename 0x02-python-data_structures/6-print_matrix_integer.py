@@ -3,7 +3,8 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for ele in row:
             if ele is row[-1]:
-                print("{:d}".format(ele))
+                print("{}".format(ele), end="")
             else:
-                 print("{:d}".format(ele), end=' ')
+                 print("{:d}".format(ele), end=" ")
+        print()
        
