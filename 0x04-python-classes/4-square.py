@@ -13,7 +13,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if isinstance(value, int) is False:
@@ -24,7 +24,10 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        for i in range(self.__size):
-            for i in range(self.__size):
-                print('#', end="")
+        if self.__size == 0:
             print()
+        else:
+            for i in range(self.__size):
+                for i in range(self.__size):
+                    print('#', end="")
+                print()
