@@ -1,0 +1,41 @@
+The text file to test file 4-print_square.py
+======================
+
+Using ''print_square''
+-------------------
+
+This is a test file to test the 4-print_square.py function print_square
+First import ``print_square`` from the ``4-print_square`` module:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+
+Now use it:
+
+Print Regular Size:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Print Zero:
+    >>> print_square(0)
+
+Print String:
+    >>> print_square("hellur")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Print Negative Int:
+    >>> print_square(-6)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Give Two Args:
+    >>> print_square(2, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
