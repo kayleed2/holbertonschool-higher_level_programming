@@ -11,3 +11,17 @@ First import ``text_indentation`` from the ``5-text_indentation`` module:
 
 
 Now use it:
+
+Normal String:
+    >>> text_indentation("Hello my name is: Do you know this? Tales are old as time.)
+    Hello my name is:
+
+ Do you know this?
+
+ Tales are old as time.
+      
+Integer Argument:
+    >>> text_indentation(124312)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
