@@ -1,0 +1,31 @@
+The text file to test file 0-add-integer.py
+======================
+
+Using ''add_integer''
+-------------------
+
+This is a test file to test the   First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+Now use it:
+    
+Adding Positive Ints: 
+    >>> add_integer(2, 98)
+    100
+
+Adding Negative Ints:
+    >>> add_integer(-5, 5)
+    0
+
+Passing in Nothing:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Pass in a not b:
+    >>> add_integer(2)
+    100
