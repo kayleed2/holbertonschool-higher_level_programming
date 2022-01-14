@@ -3,7 +3,8 @@
 
 
 class Rectangle:
-    """Write a class Rectangle that defines a rectangle based on 0-rectangle.py"""
+    """Write a class Rectangle that defines a rectangle
+    based on 0-rectangle.py"""
 
     def __init__(self, width=0, height=0):
         if isinstance(width, int) is False:
@@ -12,7 +13,7 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         else:
             self.__width = width
-        
+
         if isinstance(height, int) is False:
             raise TypeError('height must be an integer')
         elif height < 0:
