@@ -2,11 +2,6 @@
 """Write a class Rectangle that defines a rectangle based on 1-rectangle.py """
 
 
-from cmath import isnan
-from multiprocessing.sharedctypes import Value
-from typing import Type
-
-
 class Rectangle:
     """Write a class Rectangle that defines a rectangle
     based on 1-rectangle.py"""
