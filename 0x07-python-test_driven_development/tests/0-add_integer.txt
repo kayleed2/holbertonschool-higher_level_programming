@@ -29,3 +29,9 @@ Passing in Nothing:
 Pass in a not b:
     >>> add_integer(2)
     100
+
+Pass String:
+    >>> add_integer("hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
