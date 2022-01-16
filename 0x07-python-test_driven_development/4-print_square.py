@@ -5,7 +5,9 @@ python3 -c 'print(__import__("my_module").__doc__)'
 
 
 def print_square(size):
-    """ a function that prints a square with the character #.
+    """ print_square - a function that prints a square with the character #.
+    size: Size of square
+    Return: Printed square
     python3 -c 'print(__import__("my_module").__doc__)'
     """
     if isinstance(size, int) is False:
