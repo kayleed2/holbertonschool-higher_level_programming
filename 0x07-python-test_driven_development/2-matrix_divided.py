@@ -5,7 +5,12 @@ python3 -c 'print(__import__("my_module").__doc__)'"""
 
 def matrix_divided(matrix, div):
     """ Function that divides all elements of a matrix
-    python3 -c 'print(__import__("my_module").__doc__)'"""
+    python3 -c 'print(__import__("my_module").__doc__)'
+    matrix_divided - divides elements of matrix
+    matrix: matrix to divide
+    div: number divided by
+    Return: new matrix
+    """
     err = 'matrix must be a matrix (list of lists) of integers/floats'
     for row in matrix:
         for el in row:
