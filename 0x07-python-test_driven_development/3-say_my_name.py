@@ -5,7 +5,10 @@ python3 -c 'print(__import__("my_module").__doc__)'
 
 
 def say_my_name(first_name, last_name=""):
-    """function that prints My name is <first name> <last name>:
+    """say_my_name - function that prints My name is <first name> <last name>:
+    first_name: first name
+    last_name: last name
+    Return: Nothing
     python3 -c 'print(__import__("my_module").__doc__)'
     """
     if isinstance(first_name, str) is False:
