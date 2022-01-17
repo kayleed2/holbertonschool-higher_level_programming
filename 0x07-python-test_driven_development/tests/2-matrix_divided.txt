@@ -47,3 +47,15 @@ Matrix with floats:
  Matrix with negatives:   
     >>> matrix_divided([[1.5, 5.8], [2.7, 6.9]], -3)
     [[-0.5, -1.93], [-0.9, -2.3]]
+
+Empty matrix:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+One Argument:
+    >>> matrix_divided([2, 4, 4])
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
