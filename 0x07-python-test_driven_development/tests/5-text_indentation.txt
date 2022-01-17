@@ -21,6 +21,10 @@ Normal String:
     My Name is:
     Kaylee 
 
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    School
+
 Integer Argument:
     >>> text_indentation(124312)
     Traceback (most recent call last):
