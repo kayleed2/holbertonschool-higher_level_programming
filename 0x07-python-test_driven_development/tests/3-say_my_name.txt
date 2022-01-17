@@ -27,7 +27,9 @@ One Integer, One String:
     TypeError: first_name must be a string
 
     >>> say_my_name("White", 12)
-    last_name must be a string
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
 
 No arguments:
     >>> say_my_name()
