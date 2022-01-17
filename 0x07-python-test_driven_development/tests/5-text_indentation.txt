@@ -26,6 +26,9 @@ Blank Line:
     >>> text_indentation("      ")
     <BLANKLINE>
 
+    >>> text_indentation("")
+    
+
 Empty Pass:
     >>> text_indentation()
     Traceback (most recent call last):
