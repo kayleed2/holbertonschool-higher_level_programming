@@ -23,6 +23,7 @@ def text_indentation(text):
             after_newline = False
         if c in flag:
             print(c)
+            print()
             after_newline = True
         else:
             print(c, end="")

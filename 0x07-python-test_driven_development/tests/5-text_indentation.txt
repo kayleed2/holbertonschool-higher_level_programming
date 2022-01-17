@@ -18,11 +18,14 @@ Normal String:
 
     >>> text_indentation("Hello? My Name is: Kaylee ")
     Hello?
+    <BLANKLINE>
     My Name is:
+    <BLANKLINE>
     Kaylee 
 
     >>> text_indentation("Holberton.School")
     Holberton.
+    <BLANKLINE>
     School
 
 Integer Argument:
