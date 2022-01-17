@@ -37,19 +37,19 @@ Pass String:
     TypeError: a must be an integer
 
 Pass None:
-    >>> add_integer(4, int('hello')))
+    >>> add_integer(4, int('hello'))
     Traceback (most recent call last):
     ...
     ValueError: invalid literal for int() with base 10: 'hello'
 
 Pass nan value:
-    >>> add_integer(4, nan))
+    >>> add_integer(4, float('nan'))
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
 
 Pass Overflow:
-    >>> add_integer(4, float('inf')))
+    >>> add_integer(4, float('inf'))
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
