@@ -13,8 +13,8 @@ First import ``text_indentation`` from the ``5-text_indentation`` module:
 Now use it:
 
 Normal String:
-    >>> text_indentation("Hello")
-    Hello
+    >>> text_indentation("Hello my name is")
+    Hello my name is
 
 Integer Argument:
     >>> text_indentation(124312)
@@ -27,7 +27,10 @@ Blank Line:
     <BLANKLINE>
 
     >>> text_indentation("")
-    
+
+
+    >>> text_indentation("\n")
+    <BLANKLINE>
 
 Empty Pass:
     >>> text_indentation()
