@@ -5,9 +5,6 @@ python3 -c 'print(__import__("my_module").__doc__)'
 """
 
 
-from lib2to3.pgen2.token import NEWLINE
-
-
 def text_indentation(text):
     """ text_indentation - a function that prints a text with
     2 new lines after each of these characters: ., ? and :
