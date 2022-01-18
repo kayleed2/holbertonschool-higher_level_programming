@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Write a class Rectangle that defines a rectangle based on 0-rectangle.py """
+"""This is module 3-rectangle.py which contains a class:
+Write a class Rectangle that defines a rectangle based on 0-rectangle.py"""
 
 
 class Rectangle:
     """Write a class Rectangle that defines
-    a rectangle based on 0-rectangle.py"""
+    a rectangle based on 0-rectangle.py
+    """
 
     @property
     def width(self):
