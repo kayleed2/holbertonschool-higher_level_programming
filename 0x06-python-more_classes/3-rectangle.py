@@ -37,7 +37,6 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         else:
             self.__width = width
-
         if isinstance(height, int) is False:
             raise TypeError('height must be an integer')
         elif height < 0:
