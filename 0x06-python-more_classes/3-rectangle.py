@@ -60,7 +60,15 @@ class Rectangle:
     def __str__(self):
         if self.__height == 0 or self.__width == 0:
             return ("")
+        height = self.__height
         for i in range(self.__height):
             for self.__height in range(self.__width):
                 print("#", end="")
-            print()
+            if i == height - 1:
+                continue
+            else:
+                print()
+        return str()
+
+    def __repr__(self):
+        return f'Rectangle({self.__width}, {self.__height})'
