@@ -3,9 +3,7 @@
 
 
 class Rectangle:
-    """Write a class Rectangle that defines
-    a rectangle based on 2-rectangle.py"""
-
+    """Write a class Rectangle defined by 2-rectangle.py"""
     @property
     def width(self):
         return self.__width
@@ -70,5 +68,5 @@ class Rectangle:
                 print()
         return str()
 
-    """def __repr__(self):
-        return f'Rectangle({self.__width}, {self.__height})'"""
+    def __repr__(self):
+        return f'Rectangle({self.__width}, {self.__height})'
