@@ -57,7 +57,7 @@ class Rectangle:
             self.perimeter = (self.__height * 2) + (self.__width * 2)
         return self.perimeter
 
-    def __str__(self):
+    """def __str__(self):
         if self.__height == 0 or self.__width == 0:
             return ("")
         height = self.__height
@@ -71,4 +71,4 @@ class Rectangle:
         return str()
 
     def __repr__(self):
-        return f'Rectangle({self.__width}, {self.__height})'
+        return f'Rectangle({self.__width}, {self.__height})'"""
