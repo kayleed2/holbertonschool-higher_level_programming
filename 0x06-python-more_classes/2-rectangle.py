@@ -21,7 +21,7 @@ class Rectangle:
 
     @property
     def height(self):
-        self.__height = Value
+        self.__height = value
 
     @height.setter
     def height(self, value):
@@ -64,3 +64,4 @@ class Rectangle:
             for self.__height in range(self.__width):
                 print("#", end="")
             print()
+        return str()
