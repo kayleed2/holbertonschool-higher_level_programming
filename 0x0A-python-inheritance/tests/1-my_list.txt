@@ -10,13 +10,12 @@ This is a test file to test the method
 
     >>> MyList = __import__('1-my_list').MyList
 
-
 Now use it:
 
 Empty List:
     >>> my_list = MyList
 
-Pass jargon:
+Pass Jargon:
     >>> MyList(adfd)
     Traceback (most recent call last):
     ...
