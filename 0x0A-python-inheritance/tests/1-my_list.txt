@@ -1,0 +1,23 @@
+The text file to test the class MyList
+from the 1-my_list.py module.
+======================
+
+Using ''MyList'' - Class
+-------------------
+
+This is a test file to test the method
+``print_sorted`` from the ``1-my_list.py`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+
+Now use it:
+
+Empty List:
+    >>> my_list = MyList
+
+Pass jargon:
+    >>> MyList(adfd)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'adfd' is not defined
