@@ -17,7 +17,7 @@ class BaseGeometry():
         """This method validates value:
         python3 -c 'print(__import__("my_module").
         MyClass.my_function.__doc__)'"""
-        if isinstance(value, int) is False:
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError('{} must be greater than 0'.format(name))
