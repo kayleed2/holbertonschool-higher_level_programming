@@ -9,4 +9,4 @@ def is_kind_of_class(obj, a_class):
     or if the object is an instance of a class that
     inherited from, the specified class:
     python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-    return (isinstance(obj, a_class)) or (type(a_class) == type(obj))
+    return (isinstance(obj, a_class))  # or (type(a_class) == type(obj))
