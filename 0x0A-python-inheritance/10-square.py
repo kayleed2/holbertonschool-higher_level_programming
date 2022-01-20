@@ -27,4 +27,7 @@ class Square(Rectangle):
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
+        """This method returns area with size:
+        python3 -c 'print(__import__("my_module").
+        MyClass.my_function.__doc__)'"""
         return self.__size * self.__size
