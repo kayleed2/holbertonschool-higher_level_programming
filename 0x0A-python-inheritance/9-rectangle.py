@@ -21,7 +21,13 @@ class Rectangle(BaseGeometry):
             self.__height = height
 
     def __str__(self):
+        """This method prints with width and height:
+        python3 -c 'print(__import__("my_module").
+        MyClass.my_function.__doc__)'"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
+        """This method returns area with width * height:
+        python3 -c 'print(__import__("my_module").
+        MyClass.my_function.__doc__)'"""
         return self.__width * self.__height
