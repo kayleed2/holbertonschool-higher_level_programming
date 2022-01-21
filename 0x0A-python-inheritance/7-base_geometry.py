@@ -19,8 +19,12 @@ class BaseGeometry():
         MyClass.my_function.__doc__)'"""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
+            return False
+        elif value <= 0:
             raise ValueError('{} must be greater than 0'.format(name))
+            return False
+        else:
+            return True
         """else:
             self.name = name
             self.value = value"""
