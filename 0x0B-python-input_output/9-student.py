@@ -17,6 +17,6 @@ class Student:
 
     def age(self):
         return self.age
-    
+
     def to_json(self):
         return vars(self)
