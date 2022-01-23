@@ -16,11 +16,9 @@ for arg in sys.argv[1:]:
 flag = os.path.exists('add_item.json')
 
 if flag is False:
-    print("Creating new")
     save(python_list, 'add_item.json')
 
 if flag is True:
-    print("Adding to existing")
     existing = load('add_item.json')
     existing.extend(python_list)
     with open('add_item.json', 'w') as f:
