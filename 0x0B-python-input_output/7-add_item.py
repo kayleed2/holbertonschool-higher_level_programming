@@ -4,15 +4,23 @@ and then saves them to a file"""
 
 import json
 import sys
+import os.path
 save = __import__("5-save_to_json_file").save_to_json_file
 load = __import__("6-load_from_json_file").load_from_json_file
 
 python_list = []
 
-# save(python_list, 'add_item.json')
-
 for arg in sys.argv[1:]:
     python_list.append(arg)
 
-with open('add_item.json', 'a') as f:
-    json.dump(python_list, f)
+flag = os.path.exists('add_item.json')
+
+if flag is False:
+    save(python_list, 'add_item.json')
+
+if flag is True:
+    existing = load('add_item.json')
+    print(existing)
+    existing.extend(python_list)
+    with open('add_item.json', 'a') as f:
+        json.dump(existing, f)
