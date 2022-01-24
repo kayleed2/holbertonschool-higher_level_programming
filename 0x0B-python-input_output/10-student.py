@@ -2,9 +2,6 @@
 """Module that contains class Student based on 9-student.py"""
 
 
-from re import I
-
-
 class Student:
     """Defines class Student"""
     def __init__(self, first_name, last_name, age):
@@ -22,7 +19,7 @@ class Student:
         return self.age
 
     def to_json(self, attrs=None):
-        if attrs == None:
+        if attrs is None:
             return vars(self)
         new = {}
         for el in attrs:
