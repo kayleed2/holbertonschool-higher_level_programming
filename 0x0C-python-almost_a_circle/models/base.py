@@ -6,7 +6,7 @@ following projects"""
 class Base:
     """This class is base of all other classes in "almost a circle project"""
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         if id is None:
             Base.__nb_objects += 1
