@@ -2,6 +2,7 @@
 """Module with base class Rectangle that inherits from Base"""
 
 
+from re import L
 from models.base import Base
 
 
@@ -80,3 +81,8 @@ class Rectangle(Base):
         row = self.width * '#'
         for i in range(self.height):
             print(row)
+
+    def __str__(self):
+        rec = 'Rectangle'
+        l = f'[{rec}] {self.id} {self.x}/{self.y} - {self.width}/{self.height}'
+        return l
