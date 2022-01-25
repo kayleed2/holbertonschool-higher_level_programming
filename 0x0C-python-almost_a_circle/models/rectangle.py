@@ -79,7 +79,11 @@ class Rectangle(Base):
 
     def display(self):
         row = self.width * '#'
+        for l in range(self.y):
+            print()
         for i in range(self.height):
+            for n in range(self.x):
+                print(" ", end="")
             print(row)
 
     def __str__(self):
