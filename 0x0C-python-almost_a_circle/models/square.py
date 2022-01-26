@@ -10,11 +10,23 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Instantiates with arguments size, x, y, and id"""
-        width = size
-        height = size
         self.size = size
-        super().__init__(width, height, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Overwrites super str with different string"""
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.size}'
+
+    @property
+    def size(self):
+        """Returns size of square"""
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        """Sets Square size"""
+        if isinstance(value, int) is False:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = value
