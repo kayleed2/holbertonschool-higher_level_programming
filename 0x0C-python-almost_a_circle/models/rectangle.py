@@ -2,7 +2,6 @@
 """Module with base class Rectangle that inherits from Base"""
 
 
-from re import L
 from models.base import Base
 
 
@@ -94,18 +93,31 @@ class Rectangle(Base):
         l = f'[{rec}] {self.id} {self.x}/{self.y} - {self.width}/{self.height}'
         return l
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates arguments"""
         count = 1
-        for el in args:
-            if count == 1:
-                self.id = el
-            if count == 2:
-                self.width = el
-            if count == 3:
-                self.height = el
-            if count == 4:
-                self.x = el
-            if count == 5:
-                self.y = el
-            count += 1
+        if args is not None and len(args) != 0:
+            for el in args:
+                if count == 1:
+                    self.id = el
+                if count == 2:
+                    self.width = el
+                if count == 3:
+                    self.height = el
+                if count == 4:
+                    self.x = el
+                if count == 5:
+                    self.y = el
+                count += 1
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
