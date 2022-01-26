@@ -75,9 +75,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """Returns area"""
         return self.width * self.height
 
     def display(self):
+        """Displays using #"""
         row = self.width * '#'
         for l in range(self.y):
             print()
@@ -87,6 +89,23 @@ class Rectangle(Base):
             print(row)
 
     def __str__(self):
+        """Representation when printed"""
         rec = 'Rectangle'
         l = f'[{rec}] {self.id} {self.x}/{self.y} - {self.width}/{self.height}'
         return l
+
+    def update(self, *args):
+        """Updates arguments"""
+        count = 1
+        for el in args:
+            if count == 1:
+                self.id = el
+            if count == 2:
+                self.width = el
+            if count == 3:
+                self.height = el
+            if count == 4:
+                self.x = el
+            if count == 5:
+                self.y = el
+            count += 1
