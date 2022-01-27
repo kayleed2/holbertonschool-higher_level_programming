@@ -4,6 +4,8 @@ following projects"""
 
 
 import json
+import sys
+import os.path
 
 
 class Base:
@@ -23,4 +25,24 @@ class Base:
         if list_dictionaries is None or list_dictionaries == "":
             return "[]"
         else:
-            return json.dumps(list_dictionaries)
+            x = json.dumps(list_dictionaries)
+            return x
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+        if list_objs is None:
+            new_list = []
+
+        else:
+
+            for el in list_objs:
+                new_list = Base.to_json_string(el.__dict__)
+
+                if os.path.exists(f'{type(el).__name__}.json'):
+                    with open(f'{type(el).__name__}.json', 'a') as f:
+                        f.write(new_list)
+
+                else:
+                    with open(f'{type(el).__name__}.json', 'w') as f:
+                        f.write(new_list)
