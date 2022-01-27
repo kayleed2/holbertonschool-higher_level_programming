@@ -30,20 +30,21 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         if list_objs is None:
-            new_list = []
+            empty_list = []
 
         else:
-
+            new_list = []
             for el in list_objs:
-                new_list = Base.to_json_string(el.to_dictionary())
+                str = el.to_dictionary()
+                new_list.append(str)
+            json_str = Base.to_json_string(new_list)
 
-                if os.path.exists(f'{type(el).__name__}.json'):
-                    with open(f'{type(el).__name__}.json', 'a') as f:
-                        f.write(new_list)
-
-                else:
-                    with open(f'{type(el).__name__}.json', 'w') as f:
-                        f.write(new_list)
+            if os.path.exists(f'{type(el).__name__}.json'):
+                with open(f'{type(el).__name__}.json', 'a') as f:
+                    f.write(json_str)
+            else:
+                with open(f'{type(el).__name__}.json', 'w+') as f:
+                    f.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
@@ -56,6 +57,19 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
-        dummy = cls(1, 2, 3)
+        dummy = cls(1, 2)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        if os.path.exists(f'{cls.__name__}.json') is False:
+            return []
+        with open(f'{cls.__name__}.json', 'r') as f:
+                obj = json.load(f)
+        ls = []
+        for i in obj:
+            x = cls.create(**i)
+            ls.append(x)
+        return ls
