@@ -12,6 +12,10 @@ class Base:
     """This class is base of all other classes in "almost a circle project"""
     __nb_objects = 0
 
+    @classmethod
+    def clear(cls):
+        Base.__nb_object = 0
+
     def __init__(self, id=None):
         """Initializes Base class"""
         if id is None:
