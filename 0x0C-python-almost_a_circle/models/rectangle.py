@@ -90,7 +90,8 @@ class Rectangle(Base):
     def __str__(self):
         """Representation when printed"""
         rec = 'Rectangle'
-        l = f'[{rec}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        n = self.id
+        l = f'[{rec}] ({n}) {self.x}/{self.y} - {self.width}/{self.height}'
         return l
 
     def update(self, *args, **kwargs):
