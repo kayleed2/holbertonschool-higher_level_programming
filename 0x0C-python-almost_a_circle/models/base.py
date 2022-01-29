@@ -72,7 +72,7 @@ class Base:
         if os.path.exists(f'{cls.__name__}.json') is False:
             return []
         with open(f'{cls.__name__}.json', 'r') as f:
-                obj = json.load(f)
+                obj = cls.from_json_string(f.read())
         ls = []
         for i in obj:
             x = cls.create(**i)
