@@ -43,13 +43,8 @@ class Base:
                 str = el.to_dictionary()
                 new_list.append(str)
             json_str = Base.to_json_string(new_list)
-
-            if os.path.exists(f'{type(el).__name__}.json'):
-                with open(f'{type(el).__name__}.json', 'a') as f:
-                    f.write(json_str)
-            else:
-                with open(f'{type(el).__name__}.json', 'w+') as f:
-                    f.write(json_str)
+            with open(f'{type(el).__name__}.json', 'w') as f:
+                f.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
