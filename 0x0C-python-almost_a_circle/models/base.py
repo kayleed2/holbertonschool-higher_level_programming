@@ -40,7 +40,7 @@ class Base:
                 str = el.to_dictionary()
                 new_list.append(str)
             json_str = Base.to_json_string(new_list)
-            with open(f'{type(el).__name__}.json', 'w') as f:
+            with open(f'{type(el).__name__}.json', 'w+') as f:
                 f.write(json_str)
 
     @staticmethod
