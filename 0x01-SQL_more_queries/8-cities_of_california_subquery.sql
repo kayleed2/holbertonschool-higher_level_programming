@@ -5,4 +5,4 @@ FROM cities WHERE state_id = (
 	 FROM states
 	 WHERE name = 'California'
 	 )
-	 ORDER BY ASC;
+	 ORDER BY id ASC;
