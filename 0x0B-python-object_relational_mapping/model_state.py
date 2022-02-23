@@ -15,7 +15,10 @@ class State(Base):
     name = Column(String(128))
 
     def __repr__(self):
-        return "<User(name='%s', fullname='%s', nickname='%s')>"% (self.name, self.fullname, self.nickname)
+        """Defines representation"""
+        return "<User(name='%s', fullname='%s', nickname='%s')>" %
+    (self.name, self.fullname, self.nickname)
+
 
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
