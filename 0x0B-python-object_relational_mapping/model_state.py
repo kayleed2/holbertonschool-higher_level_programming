@@ -4,7 +4,6 @@
 from sqlalchemy import (create_engine, Column, String, Integer)
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine("mysql+mysqldb://root:root@localhost:3306/mydb")
 Base = declarative_base()
 
 
@@ -13,11 +12,3 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128))
-
-    def __repr__(self):
-        """Defines representation"""
-        return "<State(id='%s', name='%s')>" % (self.id, self.name)
-
-
-if __name__ == '__main__':
-    Base.metadata.create_all(engine)
