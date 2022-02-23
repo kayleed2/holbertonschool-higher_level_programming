@@ -15,7 +15,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    arg = sys.argv[4]
+    arg = [format(sys.argv[4])]
 
     record = session.query(State).filter(State.name.contains(arg))\
                                  .order_by(State.id).all()
