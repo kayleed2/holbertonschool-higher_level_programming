@@ -16,8 +16,9 @@ class State(Base):
 
     def __repr__(self):
         """Defines representation"""
-        return "<User(name='%s', fullname='%s', nickname='%s')>" %
-    (self.name, self.fullname, self.nickname)
+        return """<User(name='%s',
+        fullname='%s',
+        nickname='%s')>""" % (self.name, self.fullname, self.nickname)
 
 
 if __name__ == '__main__':
