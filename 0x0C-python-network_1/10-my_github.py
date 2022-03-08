@@ -4,10 +4,15 @@ Python script that fetches https://intranet.hbtn.io/status
 """
 
 import requests
+import sys
 
 
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
-    print("Body response:")
-    print('\t- type: {}'.format(type(r.text)))
-    print('\t- content: {}'.format(r.text))
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    r = requests.get('https://api.github.com/user', auth=(user, pwd))
+    if r.status_code > 400:
+        print("None")
+    else:
+        new = r.json()
+        print(new['id'])
