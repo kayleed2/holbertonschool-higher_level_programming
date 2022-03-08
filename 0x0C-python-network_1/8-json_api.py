@@ -10,7 +10,7 @@ import sys
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
     if len(sys.argv) == 3:
-        q = sys.argv[2]
+        q = sys.argv[1]
     else:
         q = ""
     r = requests.post(url, data={q: q})
@@ -19,6 +19,6 @@ if __name__ == "__main__":
         if res == {}:
             print("No result")
         else:
-            print("[{}] {}".format(res.get('id'), res.get('name')))
+            print("[{}] {}".format(res['id'], res['name']))
     except requests.exceptions.JSONDecodeError as er:
         print("Not a valid JSON")
