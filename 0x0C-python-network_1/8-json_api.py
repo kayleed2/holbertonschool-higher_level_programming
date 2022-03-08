@@ -3,7 +3,6 @@
 Python script that fetches https://intranet.hbtn.io/status
 """
 
-from json import JSONDecodeError
 import requests
 import sys
 
@@ -21,5 +20,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(res['id'], res['name']))
-    except JSONDecodeError as er:
+    except requests.exceptions.JSONDecodeError as er:
         print("Not a valid JSON")
