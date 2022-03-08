@@ -4,10 +4,14 @@ Python script that fetches https://intranet.hbtn.io/status
 """
 
 import requests
+import sys
 
 
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
-    print("Body response:")
-    print('\t- type: {}'.format(type(r.text)))
-    print('\t- content: {}'.format(r.text))
+    url = sys.argv[1]
+    r = requests.get(url)
+    status = r.status_code
+    if status >= 400:
+        print("Error code: {}".format(status))
+    else:
+        print(r.text)
