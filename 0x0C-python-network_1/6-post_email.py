@@ -4,10 +4,11 @@ Python script that fetches https://intranet.hbtn.io/status
 """
 
 import requests
+import sys
 
 
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
-    print("Body response:")
-    print('\t- type: {}'.format(type(r.text)))
-    print('\t- content: {}'.format(r.text))
+    url = sys.argv[1]
+    email = {'email': sys.argv[2]}
+    r = requests.post(url, data=email)
+    print("Your email is: {}".format(r.text))
