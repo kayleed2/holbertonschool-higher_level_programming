@@ -1,5 +1,4 @@
-#!/opt/homebrew/bin/node
-// #!/usr/bin/node
+#!/usr/bin/node
 // Prints a message depending on passed arguments
 
 const argOne = process.argv[2];
