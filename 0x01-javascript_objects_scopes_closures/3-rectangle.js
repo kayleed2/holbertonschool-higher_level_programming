@@ -1,5 +1,4 @@
-#!/opt/homebrew/bin/node
-// #!/usr/bin/node
+#!/usr/bin/node
 // Defines empty class Rectangle
 
 class Rectangle {
