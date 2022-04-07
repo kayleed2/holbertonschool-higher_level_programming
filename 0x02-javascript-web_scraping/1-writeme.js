@@ -8,6 +8,5 @@ const fs = require('fs');
 fs.writeFile(filePath, string, (err, data) => {
   if (err) {
     console.error(err);
-    return;
   }
 });
