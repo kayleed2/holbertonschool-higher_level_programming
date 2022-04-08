@@ -1,5 +1,4 @@
-#!/opt/homebrew/bin/node
-// #!/usr/bin/node
+#!/usr/bin/node
 // A script that display the status code of a GET request.
 
 const request = require('request');
