@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 $(function () {
-    $.getJSON('https://swapi-api.hbtn.io/api/films/?format=json', function (data) {
-      $('#list_movies');
-    });
+    $.getJSON('https://fourtonfish.com/hellosalut/?lang=fr', function (data) {
+      $('DIV#hello').html(data.hello);
 });
+})
